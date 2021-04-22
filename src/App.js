@@ -53,7 +53,7 @@ function App() {
                         </div>
                         <div className='h_line'></div>
                         <span className='header2' required>Enter Description</span>
-                        <input className='Input' type='text' required />
+                        <input className='Input' type='text' autofocus='true' required />
                         <span className='header2'>Enter Amount</span>
                         <input className='Input' type='number' required/>
                         <a className='btn_submit'>
