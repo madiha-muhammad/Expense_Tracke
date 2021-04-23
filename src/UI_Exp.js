@@ -1,6 +1,11 @@
 import React from 'react';
 
 function UI() {
+    let transactions = [
+        {amount: 500, desc: 'Cash'},
+        {amount: -40, desc: 'Book'},
+        {amount: -200, desc: 'Camera'}
+    ]
     return (
         <div className='container'>
             <div className='app_container wrapper'>
@@ -31,18 +36,14 @@ function UI() {
                     </div>
                     <div className='h_line'></div>
                     <ul className='list_transaction'>
-                        <li>
-                            <span>Cash</span>
-                            <span>+500</span>
-                        </li>
-                        <li>
-                            <span>Cash</span>
-                            <span>+500</span>
-                        </li>
-                        <li>
-                            <span>Cash</span>
-                            <span>+500</span>
-                        </li>
+                        {transactions.map((item, indx) => {
+                            return(
+                                <li>
+                                    <span>{item.desc}</span>
+                                    <span>{item.amount}</span>
+                                </li>
+                            )
+                        })}
                     </ul>
                 </div>
 
