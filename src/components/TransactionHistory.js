@@ -1,9 +1,10 @@
 import React, { useContext } from 'react';
-import {TransactionContext} from './transContext';
+import {GlobalContext} from '../context/GlobalState';
 
 export const TransactionHistory = () => {
 
-    let transactions = useContext(TransactionContext);
+    const {transactions} = useContext(GlobalContext);
+    console.log(transactions);
 
     return (
         <div className='list_container'>

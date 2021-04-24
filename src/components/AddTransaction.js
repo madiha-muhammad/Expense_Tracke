@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 export const AddTransaction = () => {
+
+    const [description, setDescription] = useState('');
+    const [transactionAmount, setTransactionAmount] = useState(0);
+
     return (
         <div className='list_container'>
             <div className='header'>
@@ -8,11 +12,40 @@ export const AddTransaction = () => {
             </div>
             <form className='transcation_frm'>
                 <div className='h_line'></div>
-                <span className='header2' required>Enter Description</span>
-                <input className='Input' type='text' autofocus='true' required />
-                <span className='header2'>Enter Amount</span>
-                <input className='Input' type='number' required />
-                <a className='btn_submit'>
+                <span
+                    className='header2'
+                    htmlFor='description'
+                >
+                    Enter Description
+                </span>
+                <input
+                    type='text'
+                    autoFocus={true}
+                    id='description'
+                    className='Input'
+                    value={description}
+                    onChange={(e) => setDescription(e.target.value)}
+                    placeholder='Details of Transaction'
+                    required />
+                <span
+                    className='header2'
+                    htmlFor='transactionAmount'
+                >
+                    Enter Amount
+                </span>
+                <input
+                    type='number'
+                    className='Input'
+                    id='transactionAmount'
+                    value={transactionAmount}
+                    onChange = {(e) => setTransactionAmount(e.target.value)}
+                    placeholder='00000000'
+                    required
+                />
+                <a 
+                    className='btn_submit'
+                    href=''
+                >
                     <span>Add Transaction&nbsp;&nbsp;&nbsp;</span>
                     <svg
                         className='rotate'
