@@ -1,8 +1,8 @@
 import {createContext} from 'react';
 
 const initialTransactions = [
-    {amount: 500, desc: 'Cash'},
-    {amount: -40, desc: 'Book'},
+    {amount: 100, desc: 'Cash'},
+    {amount: +40, desc: 'Book'},
     {amount: -200, desc: 'Camera'}
 ]
 

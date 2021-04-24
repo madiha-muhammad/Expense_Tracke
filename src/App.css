@@ -1,7 +1,7 @@
 .container {
     display: flex;
-    min-height: 100vh;
-    min-width: 100vw;
+    height: 100vh;
+    width: 100vw;
     justify-content: center;
     background-color: #282c34;
     font: Arial;
@@ -11,11 +11,11 @@
     display: flex;
     min-width: 50%;
     background-color: transparent;
-    margin: 5vmin;
+    margin: 3px;
 }
 .txt {
     font-size: 13px;
-    line-height: 2;
+    line-height: 1;
 }
 
 /*Expense Tracker */
@@ -24,7 +24,7 @@
     border-style: groove;
     border-color: #020e27;
     box-shadow: 0 0 30px #000818;
-    padding: 5vh 5vw;
+    padding: 2px 5vw;
     min-width: 300px;
 }
 
@@ -109,6 +109,10 @@
 }
 
 /* Transaction Form */
+.transcation_frm{
+    display: flex;
+    flex-direction: column;
+}
 input{
     margin: 8px 0 5px 0;
     width: inherit;
@@ -149,4 +153,12 @@ a:hover {
 .btn_submit:hover .rotate {
     transform: rotate(180deg);
     transition: 0.5s;
+}
+
+/*DIsplay Image*/
+img{
+    height: 200px;
+    position: absolute;
+    bottom: 0;
+    left: 0%;   
 }
